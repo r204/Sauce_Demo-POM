@@ -1,0 +1,19 @@
+{
+    "validAccount": { 
+        "email": "akunvalid@test.com",
+        "password": "Tester123"
+    },
+    "invalidAccount": { 
+        "email": "akuninvalid@test.com",
+        "password": "Tester123"
+    },
+    "invalidAccount2": { 
+        "email": "akuninvalid@test.com"
+    },
+    "errorMessage": { 
+        "message": "This is a required field"
+    },
+    "incorrectMessage": { 
+        "message": "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
+    }
+}

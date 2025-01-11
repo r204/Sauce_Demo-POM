@@ -11,10 +11,16 @@ class LoginPage {
         cy.get('#pass').type(password);
     }
     click_loginButton(){
-        cy.get('button[type="submit"]').contains('Sign In');
+        cy.get('button[type="submit"]').contains('Sign In').click();
     }
-    email_errormessage(){
-        cy.get('#email-error').contains('This is a required field')
+    email_errormessage(errorMessage){
+        cy.get('#email-error').contains(errorMessage)
+    }
+    password_errormessage(errorMessage){
+        cy.get('#pass-error').contains(errorMessage)
+    }
+    account_notFound(incorrectMessage){
+        cy.get('.message-error').contains(incorrectMessage)
     }
 
 }
