@@ -14,13 +14,16 @@ class LoginPage {
         cy.get('button[type="submit"]').contains('Sign In').click();
     }
     email_errormessage(errorMessage){
-        cy.get('#email-error').contains(errorMessage)
+        cy.get('#email-error').should('contain', errorMessage)
     }
     password_errormessage(errorMessage){
-        cy.get('#pass-error').contains(errorMessage)
+        cy.get('#pass-error').should('contain', errorMessage)
     }
     account_notFound(incorrectMessage){
-        cy.get('.message-error').contains(incorrectMessage)
+        cy.get('.message-error').should('contain', incorrectMessage)
+    }
+    emailpassword_errorMessage(errorMessage){
+        cy.get('.message-error').should('contain', errorMessage)
     }
 
 }

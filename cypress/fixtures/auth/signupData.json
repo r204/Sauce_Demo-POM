@@ -1,10 +1,14 @@
 {
-    "validAccount": { 
+    "validData": { 
+        "firstname": "Akun",
+        "lastname": "Testing",
         "email": "akunvalid@test.com",
         "password": "Tester123"
     },
-    "invalidAccount": { 
-        "email": "akuninvalid@test.com",
+    "invalidData": { 
+        "firstname": "Akun",
+        "lastname": "Testing",
+        "email": "akunvalidtest",
         "password": "Tester123"
     },
     "invalidAccount2": { 
