@@ -1,0 +1,210 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 3,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-01-16T05:48:50.725Z",
+    "end": "2025-01-16T05:51:44.273Z",
+    "duration": 173548,
+    "testsRegistered": 5,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bac4e742-0eef-4e36-bfe3-4da2792d3af2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "file": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "82e6093f-745e-460f-9d9e-913646a18151",
+          "title": "SCR-CA-01 - Create Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-CA-01 - Create Account With valid test data",
+              "fullTitle": "SCR-CA-01 - Create Account TC-CA-01 - Create Account With valid test data",
+              "timedOut": null,
+              "duration": 72540,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignupPage.default.click_signup();\ncy.wait(1000);\n_SignupPage.default.enter_firstname(_signupData.default.validData.firstname);\n_SignupPage.default.enter_lastname(_signupData.default.validData.lastname);\n_SignupPage.default.enter_email(_signupData.default.validData.email);\n_SignupPage.default.enter_password(_signupData.default.validData.password);\n_SignupPage.default.enter_passwordCOnfirmation(_signupData.default.validData.password);\n_SignupPage.default.click_createAccount();",
+              "err": {},
+              "uuid": "c8434e8e-9d47-4639-84e9-3952417bc617",
+              "parentUUID": "82e6093f-745e-460f-9d9e-913646a18151",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c8434e8e-9d47-4639-84e9-3952417bc617"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 72540,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "00a3b836-917f-459f-8104-6fad8d2fd41f",
+          "title": "SCR-LGN-01 - Login To The System",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-LGN-01 - Login with valid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-01 - Login with valid account",
+              "timedOut": null,
+              "duration": 24231,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();",
+              "err": {},
+              "uuid": "3d60dd76-d83e-4055-9001-fbcf04f0549c",
+              "parentUUID": "00a3b836-917f-459f-8104-6fad8d2fd41f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-02 - Login with invalid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-02 - Login with invalid account",
+              "timedOut": null,
+              "duration": 21897,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.enter_email(_loginData.default.invalidAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.account_notFound(_loginData.default.incorrectMessage.message);",
+              "err": {},
+              "uuid": "49b5b59a-9407-48ee-89b9-878f6b87967e",
+              "parentUUID": "00a3b836-917f-459f-8104-6fad8d2fd41f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-03 - Login without fill the password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-03 - Login without fill the password form",
+              "timedOut": null,
+              "duration": 20073,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-03 - Login without fill the password form (failed).png\"\n    ]\n  ]\n}",
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n//LoginPage.enter_password(loginData.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#pass-error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#pass-error`, but never found it.\n    at LoginPage.password_errormessage (webpack:///./cypress/pageObject/auth/LoginPage.js:20:30)\n    at Context.eval (webpack:///./cypress/e2e/Auth/Authentication.cy.js:40:16)",
+                "diff": null
+              },
+              "uuid": "d1830058-cfc4-4274-b9d3-50cb99266d9b",
+              "parentUUID": "00a3b836-917f-459f-8104-6fad8d2fd41f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-04 - Login without fill email and password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-04 - Login without fill email and password form",
+              "timedOut": null,
+              "duration": 34121,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-04 - Login without fill email and password form (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.wait(1000);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.email_errormessage(_loginData.default.errorMessage.message);\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#email-error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#email-error`, but never found it.\n    at LoginPage.email_errormessage (webpack:///./cypress/pageObject/auth/LoginPage.js:17:31)\n    at Context.eval (webpack:///./cypress/e2e/Auth/Authentication.cy.js:45:16)",
+                "diff": null
+              },
+              "uuid": "7e839474-cc3c-4cea-b5ce-9adac2ec7659",
+              "parentUUID": "00a3b836-917f-459f-8104-6fad8d2fd41f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d60dd76-d83e-4055-9001-fbcf04f0549c",
+            "49b5b59a-9407-48ee-89b9-878f6b87967e"
+          ],
+          "failures": [
+            "d1830058-cfc4-4274-b9d3-50cb99266d9b",
+            "7e839474-cc3c-4cea-b5ce-9adac2ec7659"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 100322,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

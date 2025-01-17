@@ -15,7 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-
+//plugin test reporting
+import 'cypress-mochawesome-reporter/register';
 //Disable Fetch & XHR Request
 // Hide fetch/XHR requests
 const app = window.top;

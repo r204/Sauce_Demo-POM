@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 1,
+    "pending": 0,
+    "failures": 4,
+    "start": "2025-01-16T05:40:06.166Z",
+    "end": "2025-01-16T05:43:28.791Z",
+    "duration": 202625,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "36c24e83-fed2-437f-855e-25119dfda09e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "file": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dab29c99-2637-4f62-a8aa-27034bba3bd5",
+          "title": "SCR-CA-01 - Create Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-CA-01 - Create Account With valid test data",
+              "fullTitle": "SCR-CA-01 - Create Account TC-CA-01 - Create Account With valid test data",
+              "timedOut": null,
+              "duration": 28767,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignupPage.default.click_signup();\ncy.wait(1000);\n_SignupPage.default.enter_firstname(_signupData.default.validData.firstname);\n_SignupPage.default.enter_lastname(_signupData.default.validData.lastname);\n_SignupPage.default.enter_email(_signupData.default.validData.email);\n_SignupPage.default.enter_password(_signupData.default.validData.password);\n_SignupPage.default.enter_passwordCOnfirmation(_signupData.default.validData.password);\n_SignupPage.default.click_createAccount();",
+              "err": {},
+              "uuid": "3d3e7f14-9625-48d4-814b-0ea72f6ec595",
+              "parentUUID": "dab29c99-2637-4f62-a8aa-27034bba3bd5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d3e7f14-9625-48d4-814b-0ea72f6ec595"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28767,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0c279ded-fec8-48d1-8154-4fdc3aba8e70",
+          "title": "SCR-LGN-01 - Login To The System",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-LGN-01 - Login with valid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-01 - Login with valid account",
+              "timedOut": null,
+              "duration": 71211,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-01 - Login with valid account (failed).png\"\n    ]\n  ]\n}",
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:130639:64)\n    at <unknown> (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:130955:16)\n    at tryCatcher (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1830:23)\n    at <unknown> (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:4209:41)\n    at tryCatcher (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://magento.softwaretestingboard.com/__cypress/runner/cypress_runner.js:2309:14)",
+                "diff": null
+              },
+              "uuid": "cb50312b-24ce-493f-92c4-7b5503be688d",
+              "parentUUID": "0c279ded-fec8-48d1-8154-4fdc3aba8e70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-02 - Login with invalid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-02 - Login with invalid account",
+              "timedOut": null,
+              "duration": 25543,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-02 - Login with invalid account (failed).png\"\n    ]\n  ]\n}",
+              "code": "_LoginPage.default.enter_email(_loginData.default.invalidAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.account_notFound(_loginData.default.incorrectMessage.message);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.message-error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.message-error`, but never found it.\n    at LoginPage.account_notFound (webpack:///./cypress/pageObject/auth/LoginPage.js:23:33)\n    at Context.eval (webpack:///./cypress/e2e/Auth/Authentication.cy.js:34:16)",
+                "diff": null
+              },
+              "uuid": "37cd1b39-4d6a-4edb-8eb8-6966f913f733",
+              "parentUUID": "0c279ded-fec8-48d1-8154-4fdc3aba8e70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-03 - Login without fill the password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-03 - Login without fill the password form",
+              "timedOut": null,
+              "duration": 49451,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-03 - Login without fill the password form (failed).png\"\n    ]\n  ]\n}",
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n//LoginPage.enter_password(loginData.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#pass-error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#pass-error`, but never found it.\n    at LoginPage.password_errormessage (webpack:///./cypress/pageObject/auth/LoginPage.js:20:30)\n    at Context.eval (webpack:///./cypress/e2e/Auth/Authentication.cy.js:40:16)",
+                "diff": null
+              },
+              "uuid": "ee554440-0c19-4c57-a458-284fc31aa7c6",
+              "parentUUID": "0c279ded-fec8-48d1-8154-4fdc3aba8e70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-04 - Login without fill email and password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-04 - Login without fill email and password form",
+              "timedOut": null,
+              "duration": 26441,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Authentication.cy.js\\\\SCR-LGN-01 - Login To The System -- TC-LGN-04 - Login without fill email and password form (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.wait(1000);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.email_errormessage(_loginData.default.errorMessage.message);\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#email-error`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#email-error`, but never found it.\n    at LoginPage.email_errormessage (webpack:///./cypress/pageObject/auth/LoginPage.js:17:31)\n    at Context.eval (webpack:///./cypress/e2e/Auth/Authentication.cy.js:45:16)",
+                "diff": null
+              },
+              "uuid": "65432582-4bd4-4445-ad8f-3bc57f3b5ab2",
+              "parentUUID": "0c279ded-fec8-48d1-8154-4fdc3aba8e70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cb50312b-24ce-493f-92c4-7b5503be688d",
+            "37cd1b39-4d6a-4edb-8eb8-6966f913f733",
+            "ee554440-0c19-4c57-a458-284fc31aa7c6",
+            "65432582-4bd4-4445-ad8f-3bc57f3b5ab2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 172646,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
