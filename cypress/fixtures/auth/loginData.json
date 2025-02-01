@@ -18,5 +18,8 @@
     },
     "emailpassword_required": {
         "message": "A login and a password are required."
+    },
+    "redirecturl": {
+        "url": "/"
     }
 }

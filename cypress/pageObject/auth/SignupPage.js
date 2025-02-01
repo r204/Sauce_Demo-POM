@@ -29,6 +29,9 @@ class SignupPage {
     firstname_error(errorMessage){
         cy.get('#firstname-error').should('contain', errorMessage)
     }
+    expected_result(redirecturl){
+        cy.url().should('include', redirecturl)
+    }
 }
 
 export default new SignupPage;

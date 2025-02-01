@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-21T01:50:24.339Z",
+    "end": "2025-01-21T01:51:08.190Z",
+    "duration": 43851,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e565de26-f241-4854-bf85-794daf8c4df6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "file": "cypress\\e2e\\Auth\\Authentication.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0eb2f2b7-3e49-4f37-8006-920f1eab2ee9",
+          "title": "SCR-CA-01 - Create Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-CA-01 - Create Account With valid test data",
+              "fullTitle": "SCR-CA-01 - Create Account TC-CA-01 - Create Account With valid test data",
+              "timedOut": null,
+              "duration": 15521,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignupPage.default.click_signup();\ncy.wait(1000);\n_SignupPage.default.enter_firstname(_signupData.default.validData.firstname);\n_SignupPage.default.enter_lastname(_signupData.default.validData.lastname);\n_SignupPage.default.enter_email(_signupData.default.validData.email);\n_SignupPage.default.enter_password(_signupData.default.validData.password);\n_SignupPage.default.enter_passwordCOnfirmation(_signupData.default.validData.password);\n_SignupPage.default.click_createAccount();\n_SignupPage.default.expected_result(_signupData.default.redirecturl.url);",
+              "err": {},
+              "uuid": "3969e77b-6de5-4014-ab94-1e165d7741af",
+              "parentUUID": "0eb2f2b7-3e49-4f37-8006-920f1eab2ee9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-CA-02 - Create Account With invalid email format",
+              "fullTitle": "SCR-CA-01 - Create Account TC-CA-02 - Create Account With invalid email format",
+              "timedOut": null,
+              "duration": 6791,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_SignupPage.default.click_signup();\ncy.wait(1000);\n_SignupPage.default.enter_firstname(_signupData.default.invalidData.firstname);\n_SignupPage.default.enter_lastname(_signupData.default.invalidData.lastname);\n_SignupPage.default.enter_email(_signupData.default.invalidData.email);\n_SignupPage.default.enter_password(_signupData.default.invalidData.password);\n_SignupPage.default.enter_passwordCOnfirmation(_signupData.default.invalidData.password);\n_SignupPage.default.click_createAccount();",
+              "err": {},
+              "uuid": "2689eafc-3246-427f-b00d-55501d7b0828",
+              "parentUUID": "0eb2f2b7-3e49-4f37-8006-920f1eab2ee9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3969e77b-6de5-4014-ab94-1e165d7741af",
+            "2689eafc-3246-427f-b00d-55501d7b0828"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "835ff9f1-ce47-4664-8408-2cc4ddb2e77a",
+          "title": "SCR-LGN-01 - Login To The System",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-LGN-01 - Login with valid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-01 - Login with valid account",
+              "timedOut": null,
+              "duration": 9189,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.expected_result();",
+              "err": {},
+              "uuid": "5a647f35-934d-4a17-80a9-5f7fd006cecf",
+              "parentUUID": "835ff9f1-ce47-4664-8408-2cc4ddb2e77a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-02 - Login with invalid account",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-02 - Login with invalid account",
+              "timedOut": null,
+              "duration": 5751,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.enter_email(_loginData.default.invalidAccount.email);\n_LoginPage.default.enter_password(_loginData.default.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.account_notFound(_loginData.default.incorrectMessage.message);",
+              "err": {},
+              "uuid": "37879be8-fc04-482a-9153-ea786d15e829",
+              "parentUUID": "835ff9f1-ce47-4664-8408-2cc4ddb2e77a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-03 - Login without fill the password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-03 - Login without fill the password form",
+              "timedOut": null,
+              "duration": 2830,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.enter_email(_loginData.default.validAccount.email);\n//LoginPage.enter_password(loginData.validAccount.password);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {},
+              "uuid": "8a2d511a-aed4-4a5c-b814-459bab238280",
+              "parentUUID": "835ff9f1-ce47-4664-8408-2cc4ddb2e77a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-LGN-04 - Login without fill email and password form",
+              "fullTitle": "SCR-LGN-01 - Login To The System TC-LGN-04 - Login without fill email and password form",
+              "timedOut": null,
+              "duration": 2918,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1000);\n_LoginPage.default.click_loginButton();\n_LoginPage.default.email_errormessage(_loginData.default.errorMessage.message);\n_LoginPage.default.password_errormessage(_loginData.default.errorMessage.message);",
+              "err": {},
+              "uuid": "3612ef95-f5d8-4ffc-ae61-54eb9a639f15",
+              "parentUUID": "835ff9f1-ce47-4664-8408-2cc4ddb2e77a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5a647f35-934d-4a17-80a9-5f7fd006cecf",
+            "37879be8-fc04-482a-9153-ea786d15e829",
+            "8a2d511a-aed4-4a5c-b814-459bab238280",
+            "3612ef95-f5d8-4ffc-ae61-54eb9a639f15"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20688,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

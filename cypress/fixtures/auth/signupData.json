@@ -9,7 +9,7 @@
         "firstname": "Akun",
         "lastname": "Testing",
         "email": "akunvalidtest",
-        "password": "Tester123"
+        "password": "123"
     },
     "invalidAccount2": { 
         "email": "akuninvalid@test.com"
@@ -22,5 +22,8 @@
     },
     "emailpassword_required": {
         "message": "A login and a password are required."
+    },
+    "redirecturl": {
+        "url": "/customer/account/"
     }
 }
